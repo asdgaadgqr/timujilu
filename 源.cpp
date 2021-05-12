@@ -1,4 +1,5 @@
 /*
+https://www.hacker101.com/sessions/introduction.html
 1.	本视频一开始介绍了哪两个工具，他们的作用分别是什么？为什么作者会推荐firefox，它的优点是什么？（5分）
 Burp Proxy and Firefox
 
@@ -64,4 +65,38 @@ xss漏洞通常是通过php的输出函数将javascript代码输出到html页面中，通过用户本地浏览
 4.思考：现实中如何利用xss漏洞实施攻击，我们应该如何预防？（1分）
 直接输出的，在输出之前进行过滤。
 要进入数据库的，在进入数据库之前过滤。
+*/
+
+
+
+
+/*
+1.目前owasp的十大web安全漏洞是哪些？这些漏洞排名是按照漏洞的严重程度排序的还是按照漏洞的常见程度排序的？（2分）
+owasp的十大web安全漏洞会逐年变化，如今可以查到2017年的
+injection
+broken authentication
+sensitive data exposure
+XML external entities（XXE）
+broken access control
+security misconfiguration
+cross site scripting XSS
+insecure deserialization
+using components with know vulnerabilities
+insufficient logging & monitoring
+排名是按照漏洞的严重程度排序
+
+2.请翻译一下credential stuffing（1分）
+凭证填充攻击
+
+3.为什么说不充分的日志记录(insufficient logging)也算owasp十大漏洞的一种？他的危害性如何（2分）
+攻击者可以进一步攻击系统，维持持久性，转向更多系统以及篡改，提取或破坏数据。
+危害性很大
+
+4.请翻阅一下owasp testing guide，以及owasp testing guide check-list，视频说怎么结合这两个文档来学习渗透测试？ 结合你平时渗透过程中的经验，谈谈你的感想。（3分）
+owasp testing guide里面有书，owasp testing guide check-list相当于一个索引，通过这个表格可以查漏洞在书上的位置，然后就可以在书上去查漏洞的具体信息。平时做题写的wp也可以写一个类似的文档，在下一次遇到类似的题的时候就可以看以前的笔记找思路。
+
+5.you are only as good as you notes
+   you are only as good as things you can refer to
+结合这两句话谈谈你的感想。（2分）
+只有想做才能做好，只有积累才能变强
 */
