@@ -71,6 +71,7 @@ xssÂ©¶´Í¨³£ÊÇÍ¨¹ýphpµÄÊä³öº¯Êý½«javascript´úÂëÊä³öµ½htmlÒ³ÃæÖÐ£¬Í¨¹ýÓÃ»§±¾µØä¯ÀÀ
 
 
 /*
+https://www.hacker101.com/sessions/pentest_owasp
 1.Ä¿Ç°owaspµÄÊ®´óweb°²È«Â©¶´ÊÇÄÄÐ©£¿ÕâÐ©Â©¶´ÅÅÃûÊÇ°´ÕÕÂ©¶´µÄÑÏÖØ³Ì¶ÈÅÅÐòµÄ»¹ÊÇ°´ÕÕÂ©¶´µÄ³£¼û³Ì¶ÈÅÅÐòµÄ£¿£¨2·Ö£©
 owaspµÄÊ®´óweb°²È«Â©¶´»áÖðÄê±ä»¯£¬Èç½ñ¿ÉÒÔ²éµ½2017ÄêµÄ
 injection
@@ -99,4 +100,62 @@ owasp testing guideÀïÃæÓÐÊé£¬owasp testing guide check-listÏàµ±ÓÚÒ»¸öË÷Òý£¬Í¨¹ýÕ
    you are only as good as things you can refer to
 ½áºÏÕâÁ½¾ä»°Ì¸Ì¸ÄãµÄ¸ÐÏë¡££¨2·Ö£©
 Ö»ÓÐÏë×ö²ÅÄÜ×öºÃ£¬Ö»ÓÐ»ýÀÛ²ÅÄÜ±äÇ¿
+*/
+
+
+
+/*
+https://www.hacker101.com/sessions/web_in_depth.html
+1.http±¨ÎÄµÄ½á¹¹ÊÇÊ²Ã´£¿£¨1·Ö£©
+ÎÞÂÛÊÇÇëÇó°ü»¹ÊÇÏìÓ¦°ü¶¼ÓµÓÐÒ»¸öÆðÊ¼ÐÐ£¨start line£©ºÍÍ·²¿£¨header£©£¬Ö»ÓÐÏìÓ¦°ü¾ßÓÐÒ»¸öÖ÷Ìå£¨body£©
+ÔÚ²é×ÊÁÏµÄÊ±ºòÕÒµ½ÁËÒ»¸öºÜÀ÷º¦µÄ´óÀÐµÄ£¬Ð´µÄºÜÏêÏ¸Ìù¸öÁ´½Óhttps://www.huaweicloud.com/articles/795b0d40dab18a6e317c1db547c3d153.html
+
+
+2.Ê²Ã´ÊÇcrlf£¿ÔÚhttp±¨ÎÄµÄÄÄ¸öÎ»ÖÃ¡££¨1·Ö£©
+»Ø³µ»»ÐÐ£¬ºÍenterºÃÏñ²î²»¶à¡£ÔÚÇëÇó±¨ÎÄÇëÇóÐÐ¡¢ÇëÇóÍ·µÄÄ©Î²ºÍ¿ÕÐÐÖÐ£¬ÔÚÏìÓ¦±¨ÎÄ×´Ì¬ÐÐ¡¢ÏìÓ¦Í·µÄÄ©Î²ºÍ¿ÕÐÐÖÐ¡£
+
+
+3.½âÊÍÏÂÕâ¼¸¸öÍ·µÄº¬Òå£¨5·Ö£©£º
+
+Í¼Æ¬: https://uploader.shimo.im/f/g5F6pOxn3T93mirM.png
+Host: ËùÇëÇó·þÎñÆ÷Ö÷»úipµØÖ·
+Accept: ¸æËß·þÎñÆ÷ÄÜ¹»·¢ËÍÄÄÐ©Ã½ÌåÀàÐÍ
+Cookie:´«ËÍcookieÊý¾Ýµ½·þÎñÆ÷
+Referer: ¸æËß·þÎñÆ÷¸ÃÍøÒ³ÊÇ´ÓÄÄ¸öÒ³ÃæÁ´½Ó¹ýÀ´µÄ
+Authorization£ºÇëÇóÏûÏ¢Í·º¬ÓÐ·þÎñÆ÷ÓÃÓÚÑéÖ¤ÓÃ»§´úÀíÉí·ÝµÄÆ¾Ö¤
+
+
+4.cookie¾ßÓÐÄÄÐ©ÌØµã£¬²»Í¬µÄÓòÃûºÍ×ÓÓòÃû¶ÔcookieÓÐÔõÑùµÄÈ¨ÏÞ£¿CookieµÄSecureºÍ HTTPOnlyÕâÁ½¸öflag·Ö±ðÓÐÊ²Ã´×÷ÓÃ£¿Çë½áºÏxss¹¥»÷À´½øÐÐËµÃ÷£¨3·Ö£©
+cookieÊÇ´Ó·þÎñÆ÷·¢ËÍµÄÊý¾ÝµÄ¹Ø¼ü²¿·Ö£¬ÔÚ¿Í»§»úÉÏ×¤ÁôÒ»¶ÎÊ±¼ä£»Ã¿¸öcookie¶¼ÓÐÒ»¸öÓ¦ÓÃÓÚÓòÄ£Ê½£¬²¢ÇÒËûÃÇÓëÖ÷»ú¿Í»§¶Ë·¢³öµÄÃ¿¸öÇëÇóÒ»Æð´«µÝ¸øÆ¥ÅäµÄÖ÷»ú¡£
+ÎªÓòÃûÌí¼ÓµÄcookie¿ÉÒÔ±»ÆäÈÎÒâµÄ×ÓÓòÃû¶ÁÈ¡£»Îª×ÓÓòÃûÌí¼ÓµÄcookie²»ÄÜ±»¸ÃÓòÃû¶ÁÈ¡£¬µ«ÊÇ¿ÉÒÔ±»×ÓÓòÃûµÄ×ÓÓòÃû¶ÁÈ¡£»×ÓÓò¿ÉÒÔÎª×Ô¼ººÍ¸¸ÓòÉèÖÃcookie£¬µ«ÊÇ²»ÄÜÎªÐÖµÜÓòÉèÖÃcookie¡£
+Secure£ºcookie½«Ö»ÄÜ·ÃÎÊHTTPSÒ³Ãæ
+HTTPOnly£ºJavaScriptÎÞ·¨¶ÁÈ¡cookie
+ÕâÑù¾Í²»ÄÜÔÚÍøÒ³ÖÐÖ²Èë¶ñÒâ´úÂëÁË
+
+5.¼òÊö±¾ÊÓÆµÌáµ½µÄxssÈÆ¹ýweb·À»ðÇ½µÄ·½°¸£¨5·Ö£©
+Êµ¼ÊÓÃÁíÒ»×é¼âÀ¨ºÅ°ü¹ü½Å±¾±êÇ©Í¨¹ýÍøÂçÓ¦ÓÃ·À»ðÇ½
+
+6.ÄÚÈÝÐáÌ½ÊÇÊ²Ã´£¿Ö÷ÒªÓÐÄÄÐ©ÀàÐÍ£¿Çë·Ö±ð¾ÙÀý£¬Ö÷ÒªÓÃÍ¾ÊÇÊ²Ã´£¿ÔÚÊ²Ã´Çé¿öÏÂ¿ÉÒÔÀûÓÃÕâÐ©Â©¶´£¿¡£ÎªÊ²Ã´facebookµÈÍøÕ¾ÐèÒªÊ¹ÓÃ²»Í¬µÄÓòÃûÀ´´æ´¢Í¼Æ¬£¿£¨5·Ö£©
+ÄÚÈÝÐáÌ½£¬Ò²±»³ÆÎªÃ½ÌåÀàÐÍÐáÌ½»òMIMEÐáÌ½£¬ÊÇ¼ì²éÒ»¸ö×Ö½ÚÁ÷µÄÄÚÈÝ£¬ÊÔÍ¼ÍÆ¶ÏÆäÖÐÊý¾ÝµÄÎÄ¼þ¸ñÊ½µÄ×ö·¨¡£ÄÚÈÝÐáÌ½Í¨³£ÓÃÔÚÃ½ÌåÀàÐÍÃ»ÓÐ±»×¼È·Ö¸¶¨µÄÇé¿ö£¬ÓÃÓÚ²¹³¥ÔªÊý¾ÝÐÅÏ¢¡£
+MIME types£º³¤µÃÏñHTML»á±»½âÎöÎªHTML£¬¿ÉÒÔÒÔ´æ´¢µÄ·½Ê½»ñµÃ¿çÕ¾µã½Å±¾
+±àÂëÐáÌ½£ºÃ»ÓÐÎªHTMLÎÄµµÖ¸¶¨±àÂë£¬ä¯ÀÀÆ÷½«ÓÃÊÔÌ½·¨À´È·¶¨Ëû£¬Èç¹ûÄÜ¹»¿ØÖÆä¯ÀÀÆ÷¶ÔÎÄ±¾½øÐÐ±àÂëµÄ·½Ê½£¬Ôò¿ÉÒÔ¸ü¸Ä½âÎö£¬¶øÇÒ»¹¿ÉÒÔÈÆ¹ý¹ýÂËÆ÷¡£
+Èç¹û¸ÃÎÄ¼þ°üº¬×ã¹»µÄHTMLÀ´´¥·¢ÐáÌ½£¬¹¥»÷Õß¾Í¿ÉÒÔÉÏ´«Ò»ÕÅÍ¼Æ¬£¬È»ºó½«ÆäÁ´½Óµ½ÊÜº¦Õß¡£
+
+
+7.Í¬Ô´²ßÂÔÊÇÊ²Ã´£¿ÏÞÖÆÊÇÊ²Ã´£¿ä¯ÀÀÆ÷ÔÚÓöµ½ÄÄÁ½ÖÖÇé¿öµÄÊ±ºò»áÓÃµ½Í¬Ô´²ßÂÔ£¿ÈçºÎ·ÅËÉSOPÏÞÖÆ£¿·ÅËÉSOPÏÞÖÆ»á¶Ôä¯ÀÀÆ÷²å¼þ°²È«Ôì³ÉÔõÑùµÄÆÆ»µ£¿
+ÎÞ·¨ÔÚ×ÓÓò¼äÒÆ¶¯Êý¾Ý£¬²»»áÔÚµ¥¶ÀµÄÓòÖ®¼äÓµÓÐËø£¬ÔöÇ¿ä¯ÀÀÆ÷µÄ°²È«ÐÔ
+ÏÞÖÆÁË¶Ôdom·ÃÎÊ
+×èÖ¹¿çÓò·¢³öÇëÇó£¬·ÀÖ¹ÎÒÆÆ»µÍøÂç
+¿ª·¢ÈËÔ±¿ÉÒÔÍ¨¹ý¸ü¸ÄÎÄµµÀ´·ÅËÉ¿ØÖÆ
+Ê¼ÖÕÄÜ½«¸½¼ÓÐÅÏ¢·¢²¼µ½ÕâÐ©À©Õ¹³ÌÐòÖÐ£¬ºÜÈÝÒ×ÊÜµ½¿çÕ¾µã½Å±¾¹¥»÷£¬¿ÉÒÔÍ¨¹ýÀ©Õ¹³ÌÐò´ÓÒ»¸öÍøÒ³Ìøµ½ÁíÒ»¸öÍøÒ³
+
+
+
+8.csrfÊÇÊ²Ã´£¿ÈçºÎÉè¼Æ¹æ±Ücsrf£¿ÊÓÆµÖÐÌáµ½µÄ´íÎóµÄcsrfÅäÖÃ·½·¨ÊÇÊ²Ã´£¿
+¿çÕ¾µãÇëÇóÎ±ÔìÊÇÖ¸¹¥»÷ÕßÓÕÊ¹ÊÜº¦Õß½øÈë¹¥»÷Õß¿ØÖÆµÄÒ³Ãæ£¬È»ºó¹¥»÷Õß½«Êý¾Ý×÷ÎªÊÜº¦ÕßÌá½»µ½Ä¿±êÕ¾µã
+Ê¹ÓÃCSRFÁîÅÆ£ºÕâÊÇ°ó¶¨µ½ÓÃ»§»á»°µÄËæ»úÁîÅÆ£¬¿ÉÒÔÇ¶Èëµ½Éú³ÉµÄÃ¿¸ö±íµ¥ÖÐ
+·¢ËÍ»Ø´úÂëµÄjsÎÄ¼þÃ¿Ò»Ò³ÉÏ¶¼ÓÐ<script src="/crsf.js">È»ºó½«csrfÁîÅÆºæ±ºµ½±íµ¥ÖÐ
+
+¸½¼ÓÌâ£º5¡¢6Á½µãÖ÷ÒªÀûÓÃµÄÊÇÓÉÓÚ·þÎñ¶ËºÍ¿Í»§¶Ë¶ÔÍ¬Ò»ÐÅÏ¢µÄ´¦Àí·½Ê½²»Í¬Ôì³ÉµÄÂ©¶´£¬Äã»¹ÄÜ¾Ù³öÏàËÆµÄÀý×ÓÃ´£¿£¨1·Ö£©
+
 */
