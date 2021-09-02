@@ -1,0 +1,17 @@
+IndentationError: unindent does not match any outer indentation leve
+空格符和制表符混用
+
+from settings import Settings
+ImportError: cannot import name 'Settings'
+类名输入错误
+
+if _name_ == '_main_':
+NameError: name '_name_' is not defined
+name和main前后都是两个横线
+
+Traceback (most recent call last):
+  File "alien_invasion.py", line 42, in <module>
+    ai.run_game()
+  File "alien_invasion.py", line 28, in run_game
+    for event in pygame.event.get():
+pygame.error: video system not initialized
